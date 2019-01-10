@@ -9,7 +9,7 @@ threadAmount = int(sys.argv[1])
 temp = 0
 #while temp < 10:
 
-noneWorking = [0, 503, 4939, 4940, 4941, 12003, 5556]
+noneWorking = [0, 503, 4939, 4940, 4941, 12003, 5556, 5082]
 
 def scrapePictures():
 	while True:
@@ -29,11 +29,11 @@ def scrapePictures():
 			file = os.path.getsize(str(name)+ ".jpg")
 			# print printsc
 				# original print file. Currently in maintance mode.
-			#print str(file) + " file"
+			# print str(file) + " file" #Used to DEBUG and find the none working pictures
 			if file in noneWorking:
 				print "[-] Invalid: " + picture + picture2
 				os.remove(name + ".jpg")
-			else: 
+			else:
 				print "[+] Valid: " + printsc
 			#temp += 1
 		if amount == 5:
@@ -51,11 +51,11 @@ def scrapePictures():
 			urllib.urlretrieve(""+ printsc, str(name) + ".jpg")
 			file = os.path.getsize(str(name)+ ".jpg")
 			#print printsc
-			#print str(file) + " file"
+			# print str(file) + " file" #Used to DEBUG and find the none working pictures
 			if file in noneWorking:
 				print "[-] Invalid: " + picture
 				os.remove(name + ".jpg")
-			else: 
+			else:
 				print "[+] Valid: " + printsc
 			#temp += 1
 
