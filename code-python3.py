@@ -7,6 +7,9 @@ if len(sys.argv) < 2:
     sys.exit("\033[37mUsage: python3 " + sys.argv[0] + " (Number of threads)")
 THREAD_AMOUNT = int(sys.argv[1])
 
+print ("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\nThis script is for educational purposes only! Use on your own responsibility!\n=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+input("Press ENTER if you have read and accept that you are fully responsible for using this script!\n")
+
 INVALID = [0, 503, 5082, 4939, 4940, 4941, 12003, 5556]
 
 def scrape_pictures(thread):
